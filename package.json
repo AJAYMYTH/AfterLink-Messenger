@@ -1,0 +1,17 @@
+{
+  "name": "afterlink-messenger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AfterLink Messenger - Real-time chat over AfterLink binary protocol",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "db:migrate": "cd server && node supabase/migrate.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-surface;
+  }
+  body {
+    @apply bg-dark-bg text-white font-sans antialiased;
+  }
+  ::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-surface rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer transition-colors hover:bg-dark-surface/50;
+  }
+  .sidebar-item.active {
+    @apply bg-dark-surface text-primary;
+  }
+  .message-bubble {
+    @apply max-w-[75%] px-4 py-2.5 rounded-lg;
+  }
+  .message-bubble.own {
+    @apply bg-primary text-white rounded-br-sm;
+  }
+  .message-bubble.other {
+    @apply bg-dark-surface text-white rounded-bl-sm;
+  }
+}
